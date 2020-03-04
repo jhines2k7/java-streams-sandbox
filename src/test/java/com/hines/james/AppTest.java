@@ -1,42 +1,19 @@
 package com.hines.james;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import com.hines.james.Employee;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
-
-    private static Employee[] arrayOfEmps
+    private static Employee[] employees = {
+      new Employee(1, "Jeff Bezos", 100000.0f),
+      new Employee(1, "Bill Gates", 200000.0f),
+      new Employee(1, "Mark Zuckerberg", 300000.0f),
+    };
 
     @Test
     public void when_increment_salary_for_each_employee_then_apply_new_salary() {

@@ -1,3 +1,5 @@
+package com.hines.james;
+
 public class Employee {
 
   public Employee(int id, String name, float salary) {
