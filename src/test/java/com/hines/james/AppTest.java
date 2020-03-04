@@ -17,7 +17,13 @@ public class AppTest
 
     @Test
     public void when_increment_salary_for_each_employee_then_apply_new_salary() {
-      
+      employees.stream().forEach(Employee::incrementSalary);
+
+      assertThat(employees, contains(
+        hasProperty("salary", equalTo(110000.0)),
+        hasProperty("salary", equalTo(220000.0)),
+        hasProperty("salary", equalTo(330000.0))
+      ));
     }
 
 }
